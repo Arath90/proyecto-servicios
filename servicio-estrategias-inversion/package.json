@@ -1,19 +1,29 @@
 {
   "name": "servicio-estrategias-inversion",
   "version": "1.0.0",
-  "description": "A simple CAP project.",
+  "scripts": {
+    "build": "cds build",
+    "dev": "cds watch",
+    "start": "cds-serve"
+  },
   "dependencies": {
     "@sap/cds": "^9",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
+    "@dotenvx/dotenvx": "^1.49.1",
     "express": "^4",
-    "mongoose": "^8.19.1"
+    "cors": "^2",
+    "mongoose": "^8"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2"
   },
-  "scripts": {
-    "start": "cds-serve"
+  "cds": {
+    "folders": {
+      "db":  "src/api/models",
+      "srv": "src/api/routes",
+      "app": "app"
+    }
   },
-  "private": true
+  "requires": {
+    "db": false
+  }
 }
