@@ -14,6 +14,6 @@ module.exports = {
 
   DATABASE:
     process.env.DATABASE ||
-    process.env.MONGODB_DB ||  // <-- tu .env actual
+    process.env.MONGODB_DB ||  
     'Inversiones',
 };
